@@ -1,6 +1,6 @@
 # terminal-ui-react
 
-A production-ready React UI component library with a clean, futuristic terminal aesthetic.
+A React UI component library with a clean, futuristic terminal aesthetic. Not yet production-ready and currently in the building phase.
 
 ## Installation
 
