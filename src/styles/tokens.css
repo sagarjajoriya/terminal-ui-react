@@ -1,23 +1,30 @@
 :root {
   --tui-font-family: "JetBrains Mono", "SFMono-Regular", "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
-  --tui-color-bg: #08110f;
-  --tui-color-panel: #0d1715;
-  --tui-color-panel-strong: #101d1a;
-  --tui-color-border: rgba(112, 255, 199, 0.22);
-  --tui-color-border-strong: rgba(112, 255, 199, 0.4);
-  --tui-color-text: #e6fff4;
-  --tui-color-text-muted: rgba(230, 255, 244, 0.72);
-  --tui-color-accent: #70ffc7;
-  --tui-color-accent-strong: #2ff2aa;
+  --tui-color-bg: #040807;
+  --tui-color-bg-elevated: #08100e;
+  --tui-color-panel: #0a1411;
+  --tui-color-panel-strong: #0e1b17;
+  --tui-color-panel-soft: rgba(10, 20, 17, 0.94);
+  --tui-color-border: rgba(0, 255, 136, 0.25);
+  --tui-color-border-strong: rgba(0, 255, 136, 0.56);
+  --tui-color-text: #eafff5;
+  --tui-color-text-muted: rgba(190, 225, 212, 0.78);
+  --tui-color-accent: #52ffb8;
+  --tui-color-accent-strong: #00f98b;
+  --tui-color-accent-soft: rgba(0, 249, 139, 0.16);
   --tui-color-danger: #ff7a90;
   --tui-shadow-sm:
     inset 0 1px 0 rgba(255, 255, 255, 0.04),
-    0 0 0 1px rgba(112, 255, 199, 0.08),
-    0 10px 24px rgba(2, 10, 8, 0.28);
-  --tui-shadow-focus: 0 0 0 3px rgba(47, 242, 170, 0.24);
+    inset 0 0 0 1px rgba(255, 255, 255, 0.015),
+    0 0 0 1px rgba(0, 255, 136, 0.06),
+    0 22px 44px rgba(0, 0, 0, 0.42);
+  --tui-shadow-focus:
+    0 0 0 1px rgba(0, 255, 136, 0.58),
+    0 0 0 4px rgba(0, 249, 139, 0.12),
+    0 0 28px rgba(0, 249, 139, 0.12);
   --tui-radius-sm: 10px;
-  --tui-radius-md: 14px;
-  --tui-transition: 160ms ease;
+  --tui-radius-md: 16px;
+  --tui-transition: 180ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 *,

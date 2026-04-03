@@ -3,11 +3,14 @@
 .tui-control-surface {
   backdrop-filter: blur(14px);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0)),
+    radial-gradient(circle at top left, rgba(0, 249, 139, 0.08), transparent 32%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0)),
     linear-gradient(180deg, var(--tui-color-panel-strong), var(--tui-color-panel));
   border: 1px solid var(--tui-color-border);
   border-radius: var(--tui-radius-sm);
   box-shadow: var(--tui-shadow-sm);
+  color: var(--tui-color-text);
+  overflow: hidden;
   position: relative;
   transition:
     transform var(--tui-transition),
@@ -18,13 +21,30 @@
 }
 
 .tui-control-surface::before {
-  background: linear-gradient(90deg, transparent, rgba(112, 255, 199, 0.18), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.32), transparent);
   content: "";
   height: 1px;
   left: 12px;
   position: absolute;
   right: 12px;
   top: 0;
+}
+
+.tui-control-surface::after {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 26%),
+    repeating-linear-gradient(
+      180deg,
+      rgba(0, 255, 136, 0.022) 0,
+      rgba(0, 255, 136, 0.022) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+  border-radius: inherit;
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
 }
 
 .tui-control-surface:focus-visible,

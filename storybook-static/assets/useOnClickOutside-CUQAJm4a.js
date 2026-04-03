@@ -1,1 +1,0 @@
-import{a as e,n as t}from"./chunk-BneVvdWh.js";import{n}from"./iframe-BpJhpG8n.js";function r(e,t,n){(0,i.useEffect)(()=>{if(!n)return;function r(n){!e.current||e.current.contains(n.target)||t()}return document.addEventListener(`mousedown`,r),()=>{document.removeEventListener(`mousedown`,r)}},[n,t,e])}var i,a=t((()=>{i=e(n(),1)}));export{r as n,a as t};

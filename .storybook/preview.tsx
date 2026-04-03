@@ -28,12 +28,15 @@ const preview: Preview = {
           display: "grid",
           placeItems: "center",
           padding: "2rem",
+          backgroundColor: "#07110f",
           backgroundImage:
-            "linear-gradient(rgba(112, 255, 199, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(112, 255, 199, 0.06) 1px, transparent 1px)",
-          backgroundSize: "32px 32px"
+            "radial-gradient(circle at top, rgba(61, 244, 178, 0.1), transparent 34%), linear-gradient(rgba(112, 255, 199, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(112, 255, 199, 0.05) 1px, transparent 1px)",
+          backgroundSize: "auto, 32px 32px, 32px 32px"
         }}
       >
-        <Story />
+        <div style={{ width: "min(42rem, 100%)" }}>
+          <Story />
+        </div>
       </div>
     )
   ]
