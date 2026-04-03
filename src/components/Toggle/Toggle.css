@@ -1,0 +1,24 @@
+@import "../../styles/choice.css";
+
+.tui-toggle__control {
+  border-radius: 999px;
+  height: 1.5rem;
+  justify-content: flex-start;
+  margin-top: 0.02rem;
+  padding: 0 0.18rem;
+  width: 2.75rem;
+}
+
+.tui-toggle__control::after {
+  background: currentColor;
+  border-radius: 999px;
+  content: "";
+  height: 0.95rem;
+  transform: translateX(0);
+  transition: transform var(--tui-transition), background-color var(--tui-transition);
+  width: 0.95rem;
+}
+
+.tui-choice__native:checked + .tui-toggle__control::after {
+  transform: translateX(1.08rem);
+}

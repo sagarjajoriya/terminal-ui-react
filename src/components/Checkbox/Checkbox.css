@@ -1,0 +1,24 @@
+@import "../../styles/choice.css";
+
+.tui-checkbox__control {
+  border-radius: 6px;
+  height: 1.2rem;
+  margin-top: 0.05rem;
+  width: 1.2rem;
+}
+
+.tui-checkbox__control::after {
+  border-bottom: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  content: "";
+  height: 0.58rem;
+  opacity: 0;
+  transform: rotate(45deg) scale(0.85);
+  transition: opacity var(--tui-transition), transform var(--tui-transition);
+  width: 0.28rem;
+}
+
+.tui-choice__native:checked + .tui-checkbox__control::after {
+  opacity: 1;
+  transform: rotate(45deg) scale(1);
+}

@@ -1,0 +1,110 @@
+@import "../../styles/control.css";
+
+.tui-button {
+  align-items: center;
+  appearance: none;
+  color: var(--tui-color-text);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: var(--tui-font-family);
+  font-size: 0.875rem;
+  font-weight: 600;
+  gap: 0.65rem;
+  justify-content: center;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  position: relative;
+  text-decoration: none;
+  transition:
+    transform var(--tui-transition),
+    border-color var(--tui-transition),
+    box-shadow var(--tui-transition),
+    background-color var(--tui-transition),
+    color var(--tui-transition);
+  user-select: none;
+  white-space: nowrap;
+}
+
+.tui-button:hover:not(:disabled) {
+  border-color: var(--tui-color-border-strong);
+  transform: translateY(-1px);
+}
+
+.tui-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.tui-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+}
+
+.tui-button[data-variant="primary"] {
+  background:
+    linear-gradient(180deg, rgba(112, 255, 199, 0.2), rgba(112, 255, 199, 0.02)),
+    linear-gradient(180deg, rgba(10, 27, 22, 0.98), rgba(8, 17, 15, 0.96));
+  border-color: rgba(112, 255, 199, 0.34);
+  color: #f2fff9;
+}
+
+.tui-button[data-variant="primary"]:hover:not(:disabled) {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 0 0 1px rgba(112, 255, 199, 0.12),
+    0 14px 28px rgba(16, 47, 38, 0.3);
+}
+
+.tui-button[data-variant="secondary"] {
+  color: var(--tui-color-text-muted);
+}
+
+.tui-button[data-variant="ghost"] {
+  background: rgba(8, 17, 15, 0.45);
+  box-shadow: inset 0 0 0 1px rgba(112, 255, 199, 0.05);
+}
+
+.tui-button[data-variant="danger"] {
+  background:
+    linear-gradient(180deg, rgba(255, 122, 144, 0.16), rgba(255, 122, 144, 0.02)),
+    linear-gradient(180deg, rgba(26, 11, 15, 0.98), rgba(21, 8, 11, 0.96));
+  border-color: rgba(255, 122, 144, 0.3);
+  color: #ffeef2;
+}
+
+.tui-button[data-size="sm"] {
+  min-height: 2.5rem;
+  padding: 0 0.9rem;
+}
+
+.tui-button[data-size="md"] {
+  min-height: 2.875rem;
+  padding: 0 1.1rem;
+}
+
+.tui-button[data-size="lg"] {
+  min-height: 3.25rem;
+  padding: 0 1.35rem;
+}
+
+.tui-button__label {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.65rem;
+}
+
+.tui-button__spinner {
+  animation: tui-spin 0.9s linear infinite;
+  border: 2px solid rgba(230, 255, 244, 0.22);
+  border-radius: 999px;
+  border-top-color: currentColor;
+  display: inline-block;
+  flex: 0 0 auto;
+  height: 0.95rem;
+  width: 0.95rem;
+}
+
+@keyframes tui-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

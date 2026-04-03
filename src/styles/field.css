@@ -1,0 +1,78 @@
+@import "./control.css";
+
+.tui-field-root {
+  color: var(--tui-color-text);
+  display: grid;
+  font-family: var(--tui-font-family);
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.tui-field-header {
+  align-items: center;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: space-between;
+}
+
+.tui-field-label {
+  color: var(--tui-color-text);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.tui-field-hint {
+  color: var(--tui-color-text-muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+}
+
+.tui-field-message {
+  color: var(--tui-color-text-muted);
+  font-size: 0.74rem;
+  line-height: 1.45;
+}
+
+.tui-field-message[data-invalid="true"] {
+  color: #ffc0cb;
+}
+
+.tui-field-shell {
+  align-items: center;
+  display: grid;
+  gap: 0.65rem;
+  min-height: 3rem;
+  padding: 0.8rem 0.9rem;
+  position: relative;
+}
+
+.tui-field-shell[data-focused="true"] {
+  transform: translateY(-1px);
+}
+
+.tui-field-shell[data-invalid="true"] {
+  border-color: rgba(255, 122, 144, 0.4);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 0 0 1px rgba(255, 122, 144, 0.1),
+    0 10px 24px rgba(21, 8, 11, 0.24);
+}
+
+.tui-field-shell[data-disabled="true"] {
+  opacity: 0.58;
+}
+
+.tui-field-prefix,
+.tui-field-suffix {
+  align-items: center;
+  color: var(--tui-color-text-muted);
+  display: inline-flex;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.tui-field-prefix {
+  color: var(--tui-color-accent);
+  font-weight: 700;
+}

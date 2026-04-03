@@ -1,0 +1,35 @@
+@import "./tokens.css";
+
+.tui-control-surface {
+  backdrop-filter: blur(14px);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0)),
+    linear-gradient(180deg, var(--tui-color-panel-strong), var(--tui-color-panel));
+  border: 1px solid var(--tui-color-border);
+  border-radius: var(--tui-radius-sm);
+  box-shadow: var(--tui-shadow-sm);
+  position: relative;
+  transition:
+    transform var(--tui-transition),
+    border-color var(--tui-transition),
+    box-shadow var(--tui-transition),
+    background-color var(--tui-transition),
+    color var(--tui-transition);
+}
+
+.tui-control-surface::before {
+  background: linear-gradient(90deg, transparent, rgba(112, 255, 199, 0.18), transparent);
+  content: "";
+  height: 1px;
+  left: 12px;
+  position: absolute;
+  right: 12px;
+  top: 0;
+}
+
+.tui-control-surface:focus-visible,
+.tui-control-surface[data-focused="true"] {
+  border-color: var(--tui-color-border-strong);
+  box-shadow: var(--tui-shadow-sm), var(--tui-shadow-focus);
+  outline: none;
+}

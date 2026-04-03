@@ -1,0 +1,9 @@
+import{a as e,n as t}from"./chunk-BneVvdWh.js";import{n,t as r}from"./iframe-BpJhpG8n.js";var i=t((()=>{})),a,o,s,c=t((()=>{a=e(n(),1),i(),o=r(),s=(0,a.forwardRef)(({className:e,description:t,disabled:n,id:r,label:i,...s},c)=>{let l=(0,a.useId)(),u=r??l;return(0,o.jsxs)(`label`,{className:e?`tui-choice ${e}`:`tui-choice`,"data-disabled":n||void 0,htmlFor:u,children:[(0,o.jsx)(`input`,{...s,ref:c,className:`tui-choice__native`,disabled:n,id:u,type:`radio`}),(0,o.jsx)(`span`,{"aria-hidden":`true`,className:`tui-choice__control tui-radio__control`}),(i||t)&&(0,o.jsxs)(`span`,{className:`tui-choice__body`,children:[i?(0,o.jsx)(`span`,{className:`tui-choice__label`,children:i}):null,t?(0,o.jsx)(`span`,{className:`tui-choice__description`,children:t}):null]})]})}),s.displayName=`Radio`,s.__docgenInfo={description:``,methods:[],displayName:`Radio`,props:{description:{required:!1,tsType:{name:`ReactNode`},description:``},label:{required:!1,tsType:{name:`ReactNode`},description:``}},composes:[`Omit`]}})),l,u,d,f,p;t((()=>{c(),l={title:`Components/Radio`,component:s,tags:[`autodocs`],args:{name:`runtime`,label:`Node.js`,description:`Use the default runtime for local commands.`}},u={},d={args:{defaultChecked:!0}},f={args:{disabled:!0}},u.parameters={...u.parameters,docs:{...u.parameters?.docs,source:{originalSource:`{}`,...u.parameters?.docs?.source}}},d.parameters={...d.parameters,docs:{...d.parameters?.docs,source:{originalSource:`{
+  args: {
+    defaultChecked: true
+  }
+}`,...d.parameters?.docs?.source}}},f.parameters={...f.parameters,docs:{...f.parameters?.docs,source:{originalSource:`{
+  args: {
+    disabled: true
+  }
+}`,...f.parameters?.docs?.source}}},p=[`Default`,`Checked`,`Disabled`]}))();export{d as Checked,u as Default,f as Disabled,p as __namedExportsOrder,l as default};

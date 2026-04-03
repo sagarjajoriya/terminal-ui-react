@@ -1,0 +1,122 @@
+@import "../../styles/field.css";
+
+.tui-multiselect {
+  position: relative;
+  width: 100%;
+}
+
+.tui-multiselect__trigger {
+  align-items: center;
+  cursor: pointer;
+  display: grid;
+  gap: 0.65rem;
+  grid-template-columns: minmax(0, 1fr) auto;
+  text-align: left;
+  width: 100%;
+}
+
+.tui-multiselect__value {
+  color: var(--tui-color-text);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  min-width: 0;
+}
+
+.tui-multiselect__value[data-placeholder="true"] {
+  color: rgba(230, 255, 244, 0.42);
+}
+
+.tui-multiselect__tag {
+  background: rgba(112, 255, 199, 0.08);
+  border: 1px solid rgba(112, 255, 199, 0.16);
+  border-radius: 999px;
+  color: var(--tui-color-accent);
+  font-size: 0.76rem;
+  padding: 0.18rem 0.5rem;
+}
+
+.tui-multiselect__chevron {
+  color: var(--tui-color-text-muted);
+  font-size: 0.95rem;
+}
+
+.tui-multiselect__menu {
+  backdrop-filter: blur(16px);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0)),
+    linear-gradient(180deg, rgba(12, 24, 21, 0.98), rgba(7, 14, 12, 0.99));
+  border: 1px solid var(--tui-color-border);
+  border-radius: var(--tui-radius-sm);
+  box-shadow: 0 18px 40px rgba(2, 10, 8, 0.4);
+  left: 0;
+  margin-top: 0.45rem;
+  max-height: 18rem;
+  overflow: auto;
+  padding: 0.35rem;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 20;
+}
+
+.tui-multiselect__option {
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: auto minmax(0, 1fr);
+  padding: 0.7rem 0.75rem;
+}
+
+.tui-multiselect__option:hover {
+  background: rgba(112, 255, 199, 0.08);
+}
+
+.tui-multiselect__check {
+  align-items: center;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0)),
+    linear-gradient(180deg, var(--tui-color-panel-strong), var(--tui-color-panel));
+  border: 1px solid var(--tui-color-border);
+  border-radius: 6px;
+  box-shadow: var(--tui-shadow-sm);
+  color: var(--tui-color-accent-strong);
+  display: inline-flex;
+  height: 1.1rem;
+  justify-content: center;
+  width: 1.1rem;
+}
+
+.tui-multiselect__check::after {
+  border-bottom: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  content: "";
+  height: 0.5rem;
+  opacity: 0;
+  transform: rotate(45deg) scale(0.85);
+  transition: opacity var(--tui-transition), transform var(--tui-transition);
+  width: 0.26rem;
+}
+
+.tui-multiselect__option[data-selected="true"] .tui-multiselect__check::after {
+  opacity: 1;
+  transform: rotate(45deg) scale(1);
+}
+
+.tui-multiselect__option-body {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.tui-multiselect__option-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.tui-multiselect__option-description {
+  color: var(--tui-color-text-muted);
+  font-size: 0.76rem;
+  line-height: 1.45;
+}

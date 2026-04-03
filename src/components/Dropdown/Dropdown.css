@@ -1,0 +1,89 @@
+@import "../../styles/field.css";
+
+.tui-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.tui-dropdown__trigger {
+  align-items: center;
+  cursor: pointer;
+  display: grid;
+  gap: 0.65rem;
+  grid-template-columns: minmax(0, 1fr) auto;
+  text-align: left;
+  width: 100%;
+}
+
+.tui-dropdown__value {
+  color: var(--tui-color-text);
+  font-family: var(--tui-font-family);
+  font-size: 0.92rem;
+  line-height: 1.4;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tui-dropdown__value[data-placeholder="true"] {
+  color: rgba(230, 255, 244, 0.42);
+}
+
+.tui-dropdown__chevron {
+  color: var(--tui-color-text-muted);
+  font-size: 0.95rem;
+}
+
+.tui-dropdown__menu {
+  backdrop-filter: blur(16px);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0)),
+    linear-gradient(180deg, rgba(12, 24, 21, 0.98), rgba(7, 14, 12, 0.99));
+  border: 1px solid var(--tui-color-border);
+  border-radius: var(--tui-radius-sm);
+  box-shadow: 0 18px 40px rgba(2, 10, 8, 0.4);
+  left: 0;
+  margin-top: 0.45rem;
+  max-height: 16rem;
+  overflow: auto;
+  padding: 0.35rem;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 20;
+}
+
+.tui-dropdown__option {
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  color: var(--tui-color-text);
+  cursor: pointer;
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.7rem 0.75rem;
+  text-align: left;
+  width: 100%;
+}
+
+.tui-dropdown__option:hover:not(:disabled),
+.tui-dropdown__option[data-selected="true"] {
+  background: rgba(112, 255, 199, 0.08);
+}
+
+.tui-dropdown__option:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.tui-dropdown__option-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.tui-dropdown__option-description {
+  color: var(--tui-color-text-muted);
+  font-size: 0.76rem;
+  line-height: 1.45;
+}

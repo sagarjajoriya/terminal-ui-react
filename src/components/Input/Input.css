@@ -1,0 +1,29 @@
+@import "../../styles/field.css";
+
+.tui-input-shell {
+  display: grid;
+  gap: 0.65rem;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+}
+
+.tui-input {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: var(--tui-color-text);
+  font-family: var(--tui-font-family);
+  font-size: 0.92rem;
+  line-height: 1.4;
+  min-width: 0;
+  outline: none;
+  padding: 0;
+  width: 100%;
+}
+
+.tui-input::placeholder {
+  color: rgba(230, 255, 244, 0.42);
+}
+
+.tui-input:disabled {
+  cursor: not-allowed;
+}

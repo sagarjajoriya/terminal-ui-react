@@ -1,0 +1,30 @@
+@import "../../styles/field.css";
+
+.tui-textarea-shell {
+  align-items: stretch;
+  grid-template-columns: 1fr;
+  padding: 0.8rem 0.9rem;
+}
+
+.tui-textarea {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: var(--tui-color-text);
+  font-family: var(--tui-font-family);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  min-height: 7.5rem;
+  outline: none;
+  padding: 0;
+  resize: vertical;
+  width: 100%;
+}
+
+.tui-textarea::placeholder {
+  color: rgba(230, 255, 244, 0.42);
+}
+
+.tui-textarea:disabled {
+  cursor: not-allowed;
+}

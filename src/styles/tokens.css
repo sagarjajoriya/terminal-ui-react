@@ -1,0 +1,27 @@
+:root {
+  --tui-font-family: "JetBrains Mono", "SFMono-Regular", "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  --tui-color-bg: #08110f;
+  --tui-color-panel: #0d1715;
+  --tui-color-panel-strong: #101d1a;
+  --tui-color-border: rgba(112, 255, 199, 0.22);
+  --tui-color-border-strong: rgba(112, 255, 199, 0.4);
+  --tui-color-text: #e6fff4;
+  --tui-color-text-muted: rgba(230, 255, 244, 0.72);
+  --tui-color-accent: #70ffc7;
+  --tui-color-accent-strong: #2ff2aa;
+  --tui-color-danger: #ff7a90;
+  --tui-shadow-sm:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 0 0 1px rgba(112, 255, 199, 0.08),
+    0 10px 24px rgba(2, 10, 8, 0.28);
+  --tui-shadow-focus: 0 0 0 3px rgba(47, 242, 170, 0.24);
+  --tui-radius-sm: 10px;
+  --tui-radius-md: 14px;
+  --tui-transition: 160ms ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

@@ -1,0 +1,110 @@
+{
+  "name": "terminal-ui-react",
+  "version": "0.1.0",
+  "description": "A clean, futuristic terminal-inspired React UI component library.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./button": {
+      "types": "./dist/components/Button/index.d.ts",
+      "import": "./dist/components/Button/index.js",
+      "require": "./dist/components/Button/index.cjs"
+    },
+    "./button/styles.css": "./dist/components/Button/Button.css",
+    "./checkbox": {
+      "types": "./dist/components/Checkbox/index.d.ts",
+      "import": "./dist/components/Checkbox/index.js",
+      "require": "./dist/components/Checkbox/index.cjs"
+    },
+    "./checkbox/styles.css": "./dist/components/Checkbox/Checkbox.css",
+    "./dropdown": {
+      "types": "./dist/components/Dropdown/index.d.ts",
+      "import": "./dist/components/Dropdown/index.js",
+      "require": "./dist/components/Dropdown/index.cjs"
+    },
+    "./dropdown/styles.css": "./dist/components/Dropdown/Dropdown.css",
+    "./input": {
+      "types": "./dist/components/Input/index.d.ts",
+      "import": "./dist/components/Input/index.js",
+      "require": "./dist/components/Input/index.cjs"
+    },
+    "./input/styles.css": "./dist/components/Input/Input.css",
+    "./multi-select": {
+      "types": "./dist/components/MultiSelect/index.d.ts",
+      "import": "./dist/components/MultiSelect/index.js",
+      "require": "./dist/components/MultiSelect/index.cjs"
+    },
+    "./multi-select/styles.css": "./dist/components/MultiSelect/MultiSelect.css",
+    "./radio": {
+      "types": "./dist/components/Radio/index.d.ts",
+      "import": "./dist/components/Radio/index.js",
+      "require": "./dist/components/Radio/index.cjs"
+    },
+    "./radio/styles.css": "./dist/components/Radio/Radio.css",
+    "./textarea": {
+      "types": "./dist/components/Textarea/index.d.ts",
+      "import": "./dist/components/Textarea/index.js",
+      "require": "./dist/components/Textarea/index.cjs"
+    },
+    "./textarea/styles.css": "./dist/components/Textarea/Textarea.css",
+    "./toggle": {
+      "types": "./dist/components/Toggle/index.d.ts",
+      "import": "./dist/components/Toggle/index.js",
+      "require": "./dist/components/Toggle/index.cjs"
+    },
+    "./toggle/styles.css": "./dist/components/Toggle/Toggle.css"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "build-storybook": "storybook build",
+    "clean": "rm -rf dist",
+    "dev": "tsup --watch",
+    "prepublishOnly": "npm run build && npm run typecheck",
+    "storybook": "storybook dev -p 6007 --no-open",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "react",
+    "component-library",
+    "design-system",
+    "terminal-ui",
+    "ui",
+    "typescript"
+  ],
+  "peerDependencies": {
+    "react": "^18.2.0 || ^19.0.0",
+    "react-dom": "^18.2.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@storybook/react-vite": "^10.3.4",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^6.0.1",
+    "storybook": "^10.3.4",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3",
+    "vite": "^8.0.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
